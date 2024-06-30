@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/Day-2/Reg_Form-1/form_logo.png">
+    <link rel="stylesheet" href="/Day-2/Reg_Form-1/styles.css">
+</head>
+
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="/Day-2/Reg_Form-1/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <div class="bg-form">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Information Form</h2>
+            <form action="#" method="post" class="space-y-6">
+                <div class="input-container">
+                    <i class='bx bxs-user icon'></i>
+                    <input type="text" id="name" name="name" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent"
+                        placeholder="Enter Name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-container">
+                    <i class='bx bxs-envelope icon' ></i>
+                    <input type="email" id="email" name="email" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent"
+                        placeholder="Enter Email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                    <i class='bx bxs-key icon' ></i>
+                    <input type="password" id="password" name="password" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent"
+                        placeholder="Enter Password">
+                    <label for="password">Password</label>
+                    <button type="button" id="togglePassword"
+                        class="absolute right-4 top-2 text-gray-500 focus:outline-none">Show</button>
+                </div>
+                <div class="input-container">
+                    <input type="numbers" id="age" name="age" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent"
+                        placeholder="Enter Age">
+                    <label for="age">Age</label>
+                </div>
+                <div class="input-container">
+                    <input type="date" id="dob" name="dob" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent">
+                    <label for="dob">Date of Birth</label>
+                </div>
+                <div class="bod ">
+                    <label for="gen">Gender Selection</label>
+                    <div class="flex items-center space-x-4" id="gen">
+                        <label for="male" class="flex items-center space-x-1">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <span>Male</span>
+                        </label>
+                        <label for="female" class="flex items-center space-x-1">
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <span>Female</span>
+                        </label>
+                        <label for="others" class="flex items-center space-x-1">
+                            <input type="radio" id="others" name="gender" value="others" required>
+                            <span>Others</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <select id="hobbies" name="hobbies" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent">
+                        <option value="" disabled selected>Select Hobbies</option>
+                        <option value="reading">Reading</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="gardening">Gardening</option>
+                        <option value="sports">Sports</option>
+                        <option value="music">Music</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <label for="hobbies">Hobbies</label>
+                </div>
+                <div class="input-container">
+                    <textarea id="message" name="message" rows="4" required
+                        class="focus:ring-indigo-400 focus:border-indigo-400 block w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 placeholder-transparent"
+                        placeholder="Enter Description"></textarea>
+                    <label for="message">Description</label>
+                </div>
+                <button type="submit"
+                    class="w-full px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
