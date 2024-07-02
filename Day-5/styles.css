@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-image: url(gridbg.jpg);
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Ensure the navbar is positioned relative to the body */
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: rgba(175, 175, 175, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    justify-content: flex-end;
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    width: 100%; /* Increased width */
+    height: 90%;
+    margin-top: 60px; /* Adjusted margin to account for the fixed navbar */
+    padding: 20px; /* Added padding to create space */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%; /* Three columns for left gap, center gap, and right */
+    grid-template-rows: 33.3% 33.3% 33.3%; /* Three rows for top gap, center gap, and bottom */
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Ensure the navbar is positioned relative to the body */
+}
+
+.box:hover {
+    z-index: 1;
+    transition: ease-in-out;
+    transition-duration: 350ms;
+    box-shadow: 1px 1px 10px black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box1 {
+    grid-column: 1; /* start column 1 (left) */
+    grid-row: 1; /* start row 1 */
+    background-image: url();
+    
+}
+
+.box2 {
+    grid-column: 3; /* start column 3 (right) */
+    grid-row: 1; /* start row 1 */
+    background-image: url();
+}
+
+.box3 {
+    grid-column: 2; /* start column 2 (center) */
+    grid-row: 2; /* start row 2 */
+    background-image: url();
+}
+
+.box4 {
+    grid-column: 1; /* start column 1 (left) */
+    grid-row: 3; /* start row 3 */
+    background-image: url();
+}
+
+.box5 {
+    grid-column: 3;
+    grid-row: 3;
+    background-image: url();
+}
+
+.box1:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    transform-origin:top left; /* Expand towards bottom right */
+}
+
+.box2:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    transform-origin:top right; /* Expand towards bottom right */
+}
+
+.box3:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    box-shadow: 1px 1px 10px black;
+}
+
+.box4:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    transform-origin:bottom left; /* Expand towards bottom right */
+}
+
+.box5:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    transform-origin:bottom right; /* Expand towards bottom right */
+}
