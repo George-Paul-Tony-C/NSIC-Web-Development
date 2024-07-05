@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    width: 100%; /* Increased width */
+    height: 90%;
+    margin-top: 60px; /* Adjusted margin to account for the fixed navbar */
+    padding: 20px; /* Added padding to create space */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%; /* Three columns for left gap, center gap, and right */
+    grid-template-rows: 33.3% 33.3% 33.3%; /* Three rows for top gap, center gap, and bottom */
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: relative; /* Ensure the navbar is positioned relative to the body */
+}
+
+
+@keyframes Blink {
+    0%{
+        color: aqua;
+        background-color: black;
+        padding: 10px;
+        transform: rotate(360deg);
+    }
+    25%{
+        color: rgb(0, 0, 0);
+        background-color: aqua;
+        padding: 5px;
+    }
+    50%{
+        color: aqua;
+        background-color: black;
+        padding: 10px;
+    }
+    75%{
+        color: rgb(0, 0, 0);
+        background-color: aqua;
+        padding: 5px;
+    }
+    100%{
+        color: aqua;
+        background-color: black;
+        padding: 10px;
+    }
+    
+}
+
+.box:hover {
+    z-index: 1;
+    transition: ease-in-out;
+    transition-duration: 350ms;
+    box-shadow: 1px 1px 10px black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box3 {
+    grid-column: 2; /* start column 2 (center) */
+    grid-row: 2; /* start row 2 */
+    background-image: url();
+}
+
+.box3:hover {
+    transform: scale(1.5); /* Scale up by 20% on hover */
+    box-shadow: 1px 1px 10px black;
+}
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #010fff 40%, #ffffff 50%, #010fff 60%, #000000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle:hover {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #010fff 40%, #ffffff 50%, #010fff 60%, #000000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: Blink 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+.mcircle {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-radius: 50%;
+}
+

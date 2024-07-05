@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: black;
+}
+
+
+/* Nav Bar */
+
+.navbar {
+    background-color: rgba(175, 175, 175, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    justify-content: flex-end;
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+}
+
+
+.navbar ul li a:hover {
+    background-color: #555;
+    color: white;
+    border-radius: 20px;
+}
+
+@media screen and (min-width:500px) {
+    .navbar ul li {
+        margin: 0 10px;
+    }
+    
+    .navbar ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 15px;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .navbar ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 5px;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+
+    .navbar ul li {
+        margin: 1px 5px;
+    }
+}
